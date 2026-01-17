@@ -1,0 +1,96 @@
+{
+  "agencies": [
+    {
+      "id": "canopy-management",
+      "name": "Canopy Management",
+      "description": "Full-service Amazon agency with proprietary C.A.T. technology",
+      "location": "Austin, TX",
+      "tier": "enterprise",
+      "marketplaces": ["amazon", "walmart", "shopify"],
+      "specialties": ["full-service", "ppc", "listing-optimization"],
+      "minRevenue": 250000,
+      "maxRevenue": 10000000,
+      "services": ["account-management", "advertising", "listing-optimization", "brand-protection"],
+      "engagementModel": ["retainer", "percentage"],
+      "website": "https://canopymanagement.com",
+      "featured": true
+    },
+    {
+      "id": "blue-wheel",
+      "name": "Blue Wheel",
+      "description": "$1B+ managed revenue, omnichannel expertise",
+      "location": "Birmingham, MI",
+      "tier": "enterprise",
+      "marketplaces": ["amazon", "walmart", "ebay", "tiktok-shop"],
+      "specialties": ["omnichannel", "enterprise", "advertising"],
+      "minRevenue": 500000,
+      "maxRevenue": 50000000,
+      "services": ["account-management", "advertising", "creative", "analytics"],
+      "engagementModel": ["retainer", "percentage"],
+      "website": "https://bluewheel.com",
+      "featured": true
+    },
+    {
+      "id": "salesduo",
+      "name": "SalesDuo",
+      "description": "AI-driven approach, ex-Amazon team leadership",
+      "location": "Remote",
+      "tier": "growth",
+      "marketplaces": ["amazon", "walmart"],
+      "specialties": ["ai-powered", "growth", "ppc"],
+      "minRevenue": 100000,
+      "maxRevenue": 5000000,
+      "services": ["account-management", "advertising", "automation"],
+      "engagementModel": ["retainer", "percentage"],
+      "website": "https://salesduo.com",
+      "featured": true
+    },
+    {
+      "id": "my-amazon-guy",
+      "name": "My Amazon Guy",
+      "description": "Fastest growing Amazon agency, education-focused",
+      "location": "Atlanta, GA",
+      "tier": "growth",
+      "marketplaces": ["amazon"],
+      "specialties": ["education", "ppc", "listing-optimization"],
+      "minRevenue": 50000,
+      "maxRevenue": 2000000,
+      "services": ["account-management", "advertising", "listing-optimization", "training"],
+      "engagementModel": ["retainer", "project"],
+      "website": "https://myamazonguy.com",
+      "featured": false
+    },
+    {
+      "id": "pattern",
+      "name": "Pattern",
+      "description": "Global marketplace accelerator, 60+ marketplaces",
+      "location": "Lehi, UT",
+      "tier": "enterprise",
+      "marketplaces": ["amazon", "walmart", "ebay", "shopify", "global"],
+      "specialties": ["global", "wholesale", "enterprise"],
+      "minRevenue": 1000000,
+      "maxRevenue": 100000000,
+      "services": ["wholesale-partnership", "account-management", "global-expansion"],
+      "engagementModel": ["wholesale", "hybrid"],
+      "website": "https://pattern.com",
+      "featured": false
+    }
+  ],
+  "tiers": {
+    "enterprise": { "label": "Enterprise", "minRevenue": 1000000 },
+    "growth": { "label": "Growth", "minRevenue": 100000 },
+    "starter": { "label": "Starter", "minRevenue": 0 }
+  },
+  "services": {
+    "account-management": "Full Account Management",
+    "advertising": "PPC & Advertising",
+    "listing-optimization": "Listing Optimization",
+    "brand-protection": "Brand Protection",
+    "wholesale-partnership": "Wholesale Partnership",
+    "creative": "Creative Services",
+    "analytics": "Analytics & Reporting",
+    "global-expansion": "Global Expansion",
+    "training": "Training & Education",
+    "automation": "Automation Tools"
+  }
+}
