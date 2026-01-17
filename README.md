@@ -101,7 +101,7 @@ See [CHANGELOG.md](docs/CHANGELOG.md) for detailed version history.
 
 Ryan - Partnerships Manager
 - Platform: StellarAdvisor
-- Powered by: ThreeColts Technology
+- Powered by: BeaconPath Holding, LLC (In Partnership with ThreeColts)
 
 ---
 
