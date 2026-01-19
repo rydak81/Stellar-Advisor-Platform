@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StellarAdvisor - Find the Perfect Amazon Growth Partner</title>
+  <meta name="description" content="Get matched with vetted Amazon agencies, wholesale partners, and growth experts. Free tools + honest guidance from someone who's been in the trenches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Core colors from your brand */
+      --dark-navy: #0a1628;
+      --medium-navy: #0d1e36;
+      --card-bg: #111d2e;
+      --primary-blue: #3b5bdb;
+      --primary-blue-hover: #364fc7;
+      --accent-cyan: #22d3ee;
+      --accent-green: #10b981;
+      --accent-orange: #f59e0b;
+      --white: #ffffff;
+      --light-text: #e2e8f0;
+      --medium-text: #94a3b8;
+      --muted-text: #64748b;
+      --border-light: rgba(255,255,255,0.05);
+      --border-medium: rgba(255,255,255,0.1);
+      --gradient-primary: linear-gradient(135deg, #3b5bdb 0%, #22d3ee 100%);
+      --gradient-dark: linear-gradient(180deg, #0a1628 0%, #0d1e36 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--dark-navy);
+      color: var(--light-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Diagonal pattern background */
+    .diagonal-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        rgba(13, 30, 54, 0.8) 20px,
+        rgba(13, 30, 54, 0.8) 21px
+      );
+      pointer-events: none;
+    }
+
+    /* Glow effect */
+    .glow-effect {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 22, 40, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-medium);
+      padding: 0.875rem 1.5rem;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--white);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover .logo-icon {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--medium-text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-blue-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 1.5rem 80px;
+      overflow: hidden;
+    }
+
+    .hero .glow-effect {
+      background: var(--primary-blue);
+      top: -200px;
+      left: -200px;
+    }
+
+    .hero .glow-effect:nth-child(2) {
+      background: var(--accent-cyan);
+      top: 50%;
+      right: -300px;
+      opacity: 0.1;
+    }
+
+    .hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 91, 219, 0.15);
+      border: 1px solid rgba(59, 91, 219, 0.3);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .hero h1 span {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--medium-text);
+      margin-bottom: 2rem;
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9375rem;
+      color: var(--light-text);
+    }
+
+    .hero-feature-icon {
+      width: 24px;
+      height: 24px;
+      background: rgba(59, 91, 219, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-feature-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent-cyan);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-medium);
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* Hero Form Card */
+    .hero-form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-header p {
+      color: var(--muted-text);
+      font-size: 0.9375rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--dark-navy);
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: var(--white);
+      color: var(--dark-navy);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 4px rgba(59, 91, 219, 0.1);
+    }
+
+    .form-group input::placeholder {
+      color: #94a3b8;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .form-submit:hover {
+      background: var(--primary-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(59, 91, 219, 0.3);
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--muted-text);
+      margin-top: 1rem;
+    }
+
+    /* Section styles */
+    .section {
+      padding: 100px 1.5rem;
+      position: relative;
+    }
+
+    .section-dark {
+      background: var(--medium-navy);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-badge {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      color: var(--medium-text);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Tool Tabs */
+    .tools-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .tool-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .tool-tab {
+      padding: 1rem 1.75rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 12px;
+      color: var(--medium-text);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+    }
+
+    .tool-tab:hover {
+      background: var(--medium-navy);
+      border-color: var(--primary-blue);
+      color: var(--white);
+    }
+
+    .tool-tab.active {
+      background: var(--gradient-primary);
+      color: var(--white);
+      border-color: transparent;
+    }
+
+    .tool-tab svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .tool-content {
+      display: none;
+      animation: fadeSlideIn 0.5s ease;
+    }
+
+    .tool-content.active {
+      display: block;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Calculator */
+    .calculator-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .calc-section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .calc-section-title svg {
+      width: 24px;
+      height: 24px;
+      color: var(--accent-cyan);
+    }
+
+    .calc-input-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .calc-input-group label {
+      display: block;
+      font-weight: 500;
+      color: var(--medium-text);
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .calc-input-group input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: var(--dark-navy);
+      border: 1px solid var(--border-medium);
+      border-radius: 10px;
+      color: var(--white);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .calc-input-group input:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.2);
+    }
+
+    .calc-results {
+      background: var(--dark-navy);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .result-highlight {
+      background: linear-gradient(135deg, rgba(59, 91, 219, 0.2), rgba(34, 211, 238, 0.1));
+      border: 1px solid rgba(59, 91, 219, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .result-highlight-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    .result-highlight-value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .result-highlight-value.positive { color: var(--accent-green); }
+    .result-highlight-value.negative { color: #ef4444; }
+
+    .result-breakdown {
+      margin-top: 1.5rem;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9375rem;
+    }
+
+    .breakdown-row:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+      border-top: 2px solid var(--border-medium);
+    }
+
+    .breakdown-label { color: var(--medium-text); }
+    .breakdown-value { color: var(--white); font-weight: 600; }
+
+    .calc-cta {
+      margin-top: 1.5rem;
+    }
+
+    .calc-cta button {
+      width: 100%;
+      padding: 1rem;
+      background: var(--gradient-primary);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .calc-cta button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(59, 91, 219, 0.4);
+    }
+
+    /* Quiz */
+    .quiz-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .progress-container {
+      margin-bottom: 2.5rem;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--medium-text);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--dark-navy);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .question-container {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .question-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2.5rem;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .option-btn {
+      padding: 1.25rem 1.5rem;
+      background: var(--dark-navy);
+      border: 2px solid var(--border-medium);
+      border-radius: 12px;
+      color: var(--light-text);
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+      text-align: center;
+    }
+
+    .option-btn:hover {
+      border-color: var(--primary-blue);
+      background: rgba(59, 91, 219, 0.1);
+    }
+
+    .option-btn.selected {
+      border-color: var(--accent-cyan);
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--white);
+    }
+
+    /* Match Results */
+    .match-results {
+      display: none;
+      text-align: center;
+    }
+
+    .match-results.active {
+      display: block;
+    }
+
+    .match-score-circle {
+      width: 120px;
+      height: 120px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+
+    .match-score-value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .match-score-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.8);
+      text-transform: uppercase;
+    }
+
+    .match-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .match-subtitle {
+      color: var(--medium-text);
+      margin-bottom: 2.5rem;
+    }
+
+    .agency-cards {
+      display: grid;
+      gap: 1.25rem;
+      text-align: left;
+    }
+
+    .agency-card {
+      background: var(--dark-navy);
+      border: 1px solid var(--border-medium);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.25rem;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .agency-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateX(5px);
+    }
+
+    .agency-rank {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .agency-name {
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .agency-desc {
+      color: var(--medium-text);
+      font-size: 0.875rem;
+    }
+
+    .agency-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .agency-tag {
+      padding: 4px 10px;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+    }
+
+    .agency-match {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-green);
+    }
+
+    .match-cta {
+      margin-top: 2.5rem;
+    }
+
+    .match-cta button {
+      background: var(--gradient-primary);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .match-cta button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(59, 91, 219, 0.4);
+    }
+
+    /* About Section */
+    .about-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--medium-navy), var(--dark-navy));
+      border: 1px solid var(--border-medium);
+      border-radius: 24px;
+      padding: 3.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-avatar {
+      width: 160px;
+      height: 160px;
+      background: var(--gradient-primary);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-avatar span {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .about-badge {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-bio {
+      color: var(--medium-text);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-credentials {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .credential-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-medium);
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: var(--light-text);
+    }
+
+    /* How It Works */
+    .steps-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .step-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-5px);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(59, 91, 219, 0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto 1.5rem;
+    }
+
+    .step-icon svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent-cyan);
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-desc {
+      color: var(--medium-text);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary-blue);
+    }
+
+    .faq-question {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-answer {
+      color: var(--medium-text);
+      line-height: 1.7;
+    }
+
+    /* Partner Benefits */
+    .benefits-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .benefit-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-medium);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .benefit-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-5px);
+    }
+
+    .benefit-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--gradient-primary);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .benefit-icon svg {
+      width: 36px;
+      height: 36px;
+      color: var(--white);
+    }
+
+    .benefit-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .benefit-desc {
+      color: var(--medium-text);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--primary-blue);
+      padding: 80px 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn-primary {
+      background: var(--white);
+      color: var(--primary-blue);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .cta-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .cta-btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-navy);
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-tagline {
+      color: var(--muted-text);
+      text-align: center;
+      font-size: 0.9375rem;
+    }
+
+    .footer-copyright {
+      color: var(--muted-text);
+      font-size: 0.8125rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      animation: modalSlideIn 0.3s ease;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--muted-text);
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+
+    .modal h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .modal > p {
+      color: var(--muted-text);
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-form input {
+      padding: 0.875rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--dark-navy);
+    }
+
+    .modal-form input:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+    }
+
+    .modal-form button {
+      padding: 1rem;
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .modal-form button:hover {
+      background: var(--primary-blue-hover);
+    }
+
+    /* Success state */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .success-state.active {
+      display: block;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: #dcfce7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .success-icon svg {
+      width: 40px;
+      height: 40px;
+      color: #16a34a;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-form-card {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .about-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-avatar {
+        margin: 0 auto;
+      }
+
+      .about-credentials {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 100px;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+
+      .options-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .agency-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .agency-rank {
+        margin: 0 auto;
+      }
+
+      .agency-match {
+        margin-top: 1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a1628">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <span class="logo-text">StellarAdvisor</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#tools">Free Tools</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#hero-form" class="nav-cta">Free Strategy Call</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="glow-effect"></div>
+    <div class="glow-effect"></div>
+    <div class="diagonal-pattern"></div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          Your Trusted Guide to Amazon Success
+        </div>
+        
+        <h1>Find the <span>Perfect Partner</span> for Your Amazon Brand</h1>
+        
+        <p class="hero-description">
+          Use our free tools to analyze your business, get matched with vetted agencies, 
+          and get honest guidance from someone who's been in the trenches.
+        </p>
+        
+        <div class="hero-features">
+          <div class="hero-feature">
+            <div class="hero-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>20+ years of Amazon & e-commerce experience</span>
+          </div>
+          <div class="hero-feature">
+            <div class="hero-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>150+ vetted agency & partner connections</span>
+          </div>
+          <div class="hero-feature">
+            <div class="hero-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span>Unbiased advice — not tied to any agency</span>
+          </div>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">150+</div>
+            <div class="stat-label">Vetted Partners</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">$50M+</div>
+            <div class="stat-label">GMV Influenced</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">100+</div>
+            <div class="stat-label">Brands Helped</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Form -->
+      <div class="hero-form-card" id="hero-form">
+        <div class="form-header">
+          <h3>Get Your Free Strategy Call</h3>
+          <p>30 minutes of honest guidance — no pitch, no pressure</p>
+        </div>
+        
+        <form id="leadForm" onsubmit="submitLeadForm(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@yourbrand.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="company">Brand / Company</label>
+            <input type="text" id="company" name="company" placeholder="Your Brand Name">
+          </div>
+          
+          <div class="form-group">
+            <label for="revenue">Monthly Amazon Revenue</label>
+            <select id="revenue" name="revenue" required>
+              <option value="">Select range...</option>
+              <option value="0-25k">$0 - $25K</option>
+              <option value="25k-100k">$25K - $100K</option>
+              <option value="100k-500k">$100K - $500K</option>
+              <option value="500k-1m">$500K - $1M</option>
+              <option value="1m+">$1M+</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="challenge">Biggest Challenge</label>
+            <select id="challenge" name="challenge" required>
+              <option value="">Select one...</option>
+              <option value="growth">Scaling / Growth</option>
+              <option value="ppc">PPC & Advertising</option>
+              <option value="agency">Finding the Right Agency</option>
+              <option value="operations">Operations & Logistics</option>
+              <option value="margins">Margin Compression</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="form-submit">Book My Free Strategy Call →</button>
+          
+          <p class="form-note">✓ No spam. No pitch. Just honest advice.</p>
+        </form>
+        
+        <div class="success-state" id="formSuccess">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h3 style="color: #0a1628; margin-bottom: 0.5rem;">You're All Set!</h3>
+          <p style="color: #64748b; margin-bottom: 1.5rem;">I'll personally review your info and reach out within 24 hours.</p>
+          <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; text-align: left;">
+            <p style="font-size: 0.875rem; color: #64748b; font-weight: 600; margin-bottom: 0.5rem;">What to expect:</p>
+            <p style="font-size: 0.875rem; color: #64748b; margin: 0;">✓ 30-minute strategy call — no pitch<br>✓ Honest assessment of your situation<br>✓ Clear recommendations on next steps</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="section" id="tools">
+    <div class="section-header">
+      <span class="section-badge">Free Tools</span>
+      <h2>Analyze Your Amazon Business</h2>
+      <p>Powerful tools to help you make smarter decisions</p>
+    </div>
+    
+    <div class="tools-container">
+      <div class="tool-tabs">
+        <button class="tool-tab active" onclick="switchTool('calculator')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <line x1="8" y1="6" x2="16" y2="6"/>
+            <line x1="8" y1="10" x2="16" y2="10"/>
+            <line x1="8" y1="14" x2="16" y2="14"/>
+            <line x1="8" y1="18" x2="16" y2="18"/>
+          </svg>
+          FBA Deal Analyzer
+        </button>
+        <button class="tool-tab" onclick="switchTool('quiz')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+          Agency Match Quiz
+        </button>
+      </div>
+      
+      <!-- Calculator Tool -->
+      <div class="tool-content active" id="calculator-tool">
+        <div class="calculator-card">
+          <div class="calc-grid">
+            <div>
+              <div class="calc-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Product Details
+              </div>
+              
+              <div class="calc-input-group">
+                <label>Selling Price ($)</label>
+                <input type="number" id="sellingPrice" value="34.99" step="0.01" onchange="calculateDeal()">
+              </div>
+              
+              <div class="calc-input-group">
+                <label>COGS / Wholesale Price ($)</label>
+                <input type="number" id="cogs" value="12.50" step="0.01" onchange="calculateDeal()">
+              </div>
+              
+              <div class="calc-input-group">
+                <label>FBA Fulfillment Fee ($)</label>
+                <input type="number" id="fbaFee" value="5.50" step="0.01" onchange="calculateDeal()">
+              </div>
+              
+              <div class="calc-input-group">
+                <label>Referral Fee (%)</label>
+                <input type="number" id="referralFee" value="15" step="0.1" onchange="calculateDeal()">
+              </div>
+              
+              <div class="calc-input-group">
+                <label>Target ACOS/TACOS (%)</label>
+                <input type="number" id="tacos" value="15" step="0.1" onchange="calculateDeal()">
+              </div>
+              
+              <div class="calc-input-group">
+                <label>Units per Month</label>
+                <input type="number" id="unitsMonth" value="500" onchange="calculateDeal()">
+              </div>
+            </div>
+            
+            <div class="calc-results">
+              <div class="result-highlight">
+                <div class="result-highlight-label">Profit Per Unit</div>
+                <div class="result-highlight-value positive" id="profitPerUnit">$5.87</div>
+              </div>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="result-highlight" style="margin: 0;">
+                  <div class="result-highlight-label">Profit Margin</div>
+                  <div class="result-highlight-value" id="profitMargin" style="font-size: 1.75rem;">16.8%</div>
+                </div>
+                <div class="result-highlight" style="margin: 0;">
+                  <div class="result-highlight-label">Monthly Profit</div>
+                  <div class="result-highlight-value positive" id="monthlyProfit" style="font-size: 1.75rem;">$2,935</div>
+                </div>
+              </div>
+              
+              <div class="result-breakdown">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">Revenue</span>
+                  <span class="breakdown-value" id="bd-revenue">$34.99</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">− COGS</span>
+                  <span class="breakdown-value" id="bd-cogs">$12.50</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">− Referral Fee</span>
+                  <span class="breakdown-value" id="bd-referral">$5.25</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">− FBA Fee</span>
+                  <span class="breakdown-value" id="bd-fba">$5.50</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">− Ad Spend</span>
+                  <span class="breakdown-value" id="bd-ads">$5.25</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">Net Profit</span>
+                  <span class="breakdown-value" style="color: var(--accent-green);" id="bd-profit">$5.87</span>
+                </div>
+              </div>
+              
+              <div class="calc-cta">
+                <button onclick="openModal()">Get Full Analysis + Strategy Call →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quiz Tool -->
+      <div class="tool-content" id="quiz-tool">
+        <div class="quiz-card">
+          <div class="progress-container" id="quizProgress">
+            <div class="progress-header">
+              <span>Agency Match Quiz</span>
+              <span id="progressText">Question 1 of 5</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill" style="width: 20%;"></div>
+            </div>
+          </div>
+          
+          <div id="questionsContainer">
+            <!-- Question 1 -->
+            <div class="question-container" id="q1">
+              <div class="question-text">What's your current monthly Amazon revenue?</div>
+              <div class="options-grid">
+                <button class="option-btn" onclick="selectOption(1, 'a')">$0 - $50K</button>
+                <button class="option-btn" onclick="selectOption(1, 'b')">$50K - $250K</button>
+                <button class="option-btn" onclick="selectOption(1, 'c')">$250K - $1M</button>
+                <button class="option-btn" onclick="selectOption(1, 'd')">$1M+</button>
+              </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-container" id="q2" style="display: none;">
+              <div class="question-text">What type of help do you need most?</div>
+              <div class="options-grid">
+                <button class="option-btn" onclick="selectOption(2, 'a')">Full Account Management</button>
+                <button class="option-btn" onclick="selectOption(2, 'b')">PPC & Advertising</button>
+                <button class="option-btn" onclick="selectOption(2, 'c')">Listing Optimization</button>
+                <button class="option-btn" onclick="selectOption(2, 'd')">Wholesale Partnership</button>
+              </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question-container" id="q3" style="display: none;">
+              <div class="question-text">Which marketplaces do you sell on?</div>
+              <div class="options-grid">
+                <button class="option-btn" onclick="selectOption(3, 'a')">Amazon US Only</button>
+                <button class="option-btn" onclick="selectOption(3, 'b')">Multiple Amazon Markets</button>
+                <button class="option-btn" onclick="selectOption(3, 'c')">Amazon + Walmart</button>
+                <button class="option-btn" onclick="selectOption(3, 'd')">Omnichannel (3+)</button>
+              </div>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question-container" id="q4" style="display: none;">
+              <div class="question-text">What's your preferred engagement model?</div>
+              <div class="options-grid">
+                <button class="option-btn" onclick="selectOption(4, 'a')">Monthly Retainer</button>
+                <button class="option-btn" onclick="selectOption(4, 'b')">Percentage of Sales</button>
+                <button class="option-btn" onclick="selectOption(4, 'c')">Wholesale (They Buy Inventory)</button>
+                <button class="option-btn" onclick="selectOption(4, 'd')">Project Based</button>
+              </div>
+            </div>
+            
+            <!-- Question 5 -->
+            <div class="question-container" id="q5" style="display: none;">
+              <div class="question-text">How soon do you need help?</div>
+              <div class="options-grid">
+                <button class="option-btn" onclick="selectOption(5, 'a')">Immediately</button>
+                <button class="option-btn" onclick="selectOption(5, 'b')">Within 30 Days</button>
+                <button class="option-btn" onclick="selectOption(5, 'c')">Within 90 Days</button>
+                <button class="option-btn" onclick="selectOption(5, 'd')">Just Exploring</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Match Results -->
+          <div class="match-results" id="matchResults">
+            <div class="match-score-circle">
+              <div class="match-score-value">87</div>
+              <div class="match-score-label">Match Score</div>
+            </div>
+            
+            <h3 class="match-title">Your Top Agency Matches</h3>
+            <p class="match-subtitle">Based on your responses, these partners are the best fit</p>
+            
+            <div class="agency-cards">
+              <div class="agency-card">
+                <div class="agency-rank">1</div>
+                <div>
+                  <div class="agency-name">Canopy Management</div>
+                  <div class="agency-desc">Full-service Amazon agency with proprietary technology</div>
+                  <div class="agency-tags">
+                    <span class="agency-tag">Amazon</span>
+                    <span class="agency-tag">Walmart</span>
+                    <span class="agency-tag">Full Service</span>
+                  </div>
+                </div>
+                <div class="agency-match">94%</div>
+              </div>
+              
+              <div class="agency-card">
+                <div class="agency-rank">2</div>
+                <div>
+                  <div class="agency-name">Blue Wheel</div>
+                  <div class="agency-desc">$1B+ managed revenue, omnichannel expertise</div>
+                  <div class="agency-tags">
+                    <span class="agency-tag">Enterprise</span>
+                    <span class="agency-tag">Omnichannel</span>
+                  </div>
+                </div>
+                <div class="agency-match">89%</div>
+              </div>
+              
+              <div class="agency-card">
+                <div class="agency-rank">3</div>
+                <div>
+                  <div class="agency-name">SalesDuo</div>
+                  <div class="agency-desc">AI-driven approach, ex-Amazon team</div>
+                  <div class="agency-tags">
+                    <span class="agency-tag">AI-Powered</span>
+                    <span class="agency-tag">Growth</span>
+                  </div>
+                </div>
+                <div class="agency-match">87%</div>
+              </div>
+            </div>
+            
+            <div class="match-cta">
+              <button onclick="openModal()">Get Introductions to These Partners →</button>
+              <p style="color: var(--muted-text); font-size: 0.875rem; margin-top: 1rem;">We'll personally introduce you to your top matches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-dark" id="how-it-works">
+    <div class="section-header">
+      <span class="section-badge">How It Works</span>
+      <h2>Three Simple Steps</h2>
+      <p>From analysis to action in minutes</p>
+    </div>
+    
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <line x1="8" y1="6" x2="16" y2="6"/>
+            <line x1="8" y1="10" x2="16" y2="10"/>
+            <line x1="8" y1="14" x2="16" y2="14"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Use Free Tools</h3>
+        <p class="step-desc">Analyze your deals, take our matching quiz, and get clarity on your Amazon situation.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Strategy Call</h3>
+        <p class="step-desc">Book a free 30-minute call. Get honest advice and clear recommendations—no pitch.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Get Matched</h3>
+        <p class="step-desc">If you need a partner, I'll introduce you to vetted agencies that fit your specific needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="about-card">
+      <div class="about-avatar">
+        <span>R</span>
+      </div>
+      <div>
+        <div class="about-badge">Your Advisor</div>
+        <h3 class="about-name">Hey, I'm Ryan</h3>
+        <p class="about-bio">
+          With 20+ years in e-commerce and deep expertise in the Amazon ecosystem, I've worked 
+          both agency-side and brand-side. I've seen what works, what doesn't, and how to tell 
+          the difference between good partners and bad ones.
+        </p>
+        <p class="about-bio">
+          I'm not here to sell you anything. I built StellarAdvisor because I saw too many brands 
+          make costly mistakes choosing the wrong agency or partner. My goal is simple: give you 
+          the honest guidance you need to make the right decision.
+        </p>
+        <div class="about-credentials">
+          <span class="credential-tag">20+ Years E-commerce</span>
+          <span class="credential-tag">$50M+ GMV Influenced</span>
+          <span class="credential-tag">100+ Brands Helped</span>
+          <span class="credential-tag">150+ Partner Network</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-dark" id="faq">
+    <div class="section-header">
+      <span class="section-badge">Common Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">Is this really free?</div>
+        <div class="faq-answer">Yes, 100%. The strategy call is completely free with no obligation. I'm not going to pitch you anything or pressure you to buy. My goal is to help you get clarity on your Amazon strategy.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">What happens on the call?</div>
+        <div class="faq-answer">We'll spend 30 minutes discussing your brand, your challenges, and your goals. I'll give you honest feedback on what I'd prioritize and whether you need outside help at all. You'll leave with clear action items.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Why are you doing this for free?</div>
+        <div class="faq-answer">Two reasons: First, I genuinely enjoy helping brands navigate the confusing Amazon landscape. Second, if you do need a partner down the road, I can make introductions — but only if it's the right fit for you.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Do I need to be a certain size?</div>
+        <div class="faq-answer">I typically work with brands doing $25K-$5M/month on Amazon, but I'm happy to chat with anyone serious about growing their Amazon presence. If I'm not the right fit, I'll point you in the right direction.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do you make money?</div>
+        <div class="faq-answer">If you decide you need a partner and I make an introduction that leads to a successful partnership, I receive a referral fee from the agency. But that never influences my recommendations—I only suggest partners I genuinely believe are a good fit.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Partners Section -->
+  <section class="section" id="partners">
+    <div class="section-header">
+      <span class="section-badge">For Agencies</span>
+      <h2>Partner With StellarAdvisor</h2>
+      <p>Receive qualified, warm seller introductions</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Qualified Leads</h3>
+        <p class="benefit-desc">Pre-screened sellers matched to your ideal client profile, delivered warm.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Seller Intelligence</h3>
+        <p class="benefit-desc">Access detailed seller profiles with revenue data, challenges, and goals.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Performance-Based</h3>
+        <p class="benefit-desc">Only pay for leads that convert—aligned incentives for mutual success.</p>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="mailto:partners@stellaradvisor.com" class="nav-cta" style="display: inline-block; padding: 1rem 2rem;">Apply for Partnership</a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready for Honest Amazon Advice?</h2>
+      <p>Book your free strategy call now. Let's figure out what's working, what's not, and what you should do next.</p>
+      <div class="cta-buttons">
+        <a href="#hero-form" class="cta-btn-primary">Book My Free Strategy Call</a>
+        <a href="#tools" class="cta-btn-secondary">Try Free Tools First</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a1628">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <span class="logo-text">StellarAdvisor</span>
+      </div>
+      <p class="footer-tagline">Your trusted guide to Amazon success. Independent advice, no strings attached.</p>
+      <p class="footer-copyright">© 2026 StellarAdvisor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <h3>Get Your Full Report</h3>
+      <p>Enter your details to receive your personalized analysis and partner recommendations.</p>
+      <form class="modal-form" onsubmit="submitModal(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Brand / Company">
+        <input type="tel" placeholder="Phone (optional)">
+        <button type="submit">Get My Report + Book Call →</button>
+      </form>
+      <p style="font-size: 0.75rem; color: var(--muted-text); margin-top: 1rem; text-align: center;">We respect your privacy. No spam, ever.</p>
+    </div>
+  </div>
+
+  <script>
+    // Calculator functionality
+    function calculateDeal() {
+      const price = parseFloat(document.getElementById('sellingPrice').value) || 0;
+      const cogs = parseFloat(document.getElementById('cogs').value) || 0;
+      const fbaFee = parseFloat(document.getElementById('fbaFee').value) || 0;
+      const referralPct = parseFloat(document.getElementById('referralFee').value) || 0;
+      const tacos = parseFloat(document.getElementById('tacos').value) || 0;
+      const units = parseInt(document.getElementById('unitsMonth').value) || 0;
+      
+      const referralAmt = price * (referralPct / 100);
+      const adSpend = price * (tacos / 100);
+      const profit = price - cogs - fbaFee - referralAmt - adSpend;
+      const margin = (profit / price) * 100;
+      const monthly = profit * units;
+      
+      // Update displays
+      const profitEl = document.getElementById('profitPerUnit');
+      profitEl.textContent = '$' + profit.toFixed(2);
+      profitEl.className = 'result-highlight-value ' + (profit > 0 ? 'positive' : 'negative');
+      
+      document.getElementById('profitMargin').textContent = margin.toFixed(1) + '%';
+      document.getElementById('monthlyProfit').textContent = '$' + monthly.toLocaleString('en-US', {maximumFractionDigits: 0});
+      
+      document.getElementById('bd-revenue').textContent = '$' + price.toFixed(2);
+      document.getElementById('bd-cogs').textContent = '$' + cogs.toFixed(2);
+      document.getElementById('bd-referral').textContent = '$' + referralAmt.toFixed(2);
+      document.getElementById('bd-fba').textContent = '$' + fbaFee.toFixed(2);
+      document.getElementById('bd-ads').textContent = '$' + adSpend.toFixed(2);
+      document.getElementById('bd-profit').textContent = '$' + profit.toFixed(2);
+    }
+
+    // Tool switching
+    function switchTool(tool) {
+      document.querySelectorAll('.tool-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tool-content').forEach(c => c.classList.remove('active'));
+      event.target.closest('.tool-tab').classList.add('active');
+      document.getElementById(tool + '-tool').classList.add('active');
+    }
+
+    // Quiz functionality
+    let currentQ = 1;
+    let answers = {};
+
+    function selectOption(q, opt) {
+      answers[q] = opt;
+      
+      // Highlight selected
+      document.querySelectorAll('#q' + q + ' .option-btn').forEach(b => b.classList.remove('selected'));
+      event.target.classList.add('selected');
+      
+      setTimeout(() => {
+        if (q < 5) {
+          document.getElementById('q' + q).style.display = 'none';
+          document.getElementById('q' + (q + 1)).style.display = 'block';
+          document.getElementById('progressFill').style.width = ((q + 1) * 20) + '%';
+          document.getElementById('progressText').textContent = 'Question ' + (q + 1) + ' of 5';
+          currentQ++;
+        } else {
+          showResults();
+        }
+      }, 300);
+    }
+
+    function showResults() {
+      document.getElementById('questionsContainer').style.display = 'none';
+      document.getElementById('quizProgress').style.display = 'none';
+      document.getElementById('matchResults').classList.add('active');
+    }
+
+    // Modal
+    function openModal() {
+      document.getElementById('modalOverlay').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('active');
+    }
+
+    function submitModal(e) {
+      e.preventDefault();
+      alert('Thanks! Check your email for your personalized report.');
+      closeModal();
+    }
+
+    // Lead form
+    function submitLeadForm(e) {
+      e.preventDefault();
+      document.getElementById('leadForm').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('active');
+      // In production: send to Airtable/backend
+    }
+
+    // Initialize
+    calculateDeal();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
