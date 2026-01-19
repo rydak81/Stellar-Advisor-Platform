@@ -1,0 +1,22 @@
+{
+  "name": "stellar-advisor-platform",
+  "version": "1.0.0",
+  "description": "A lead generation platform that connects Amazon sellers with vetted agency partners.",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Static HTML site - no build process required'",
+    "start": "echo 'Static HTML site - serve using any HTTP server'",
+    "deploy": "vercel deploy"
+  },
+  "keywords": [
+    "amazon",
+    "sellers",
+    "lead-generation",
+    "agencies",
+    "saas"
+  ],
+  "author": "Ryan - Partnerships Manager",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
